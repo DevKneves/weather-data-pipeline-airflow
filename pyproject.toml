@@ -1,0 +1,25 @@
+[project]
+name = "tutorial-pipeline"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "apache-airflow>=3.3.1",
+    "pandas>=3.0.5",
+    "psycopg2-binary>=2.9.12",
+    "pymysql>=1.2.0",
+    "python-dotenv>=1.2.3",
+    "requests>=2.34.2",
+    "sqlalchemy>=2.0.52",
+]
+
+[tool.uv]
+package = false
+
+[project.scripts]
+tutorial-pipeline = "tutorial_pipeline:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
